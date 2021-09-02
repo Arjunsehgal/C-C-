@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main (){
+    cout<<"My Name Is Arjun Sehgal\n";
+
+	int a =3;
+	int b=2;
+	int sum = 3 +2 ;
+	cout << "sum :"<< sum<<endl;
+	cout << 200%3<<endl;
+
+	int c = 5;
+	c = c+1;
+	cout <<c << endl;
+	
+	cout<<c++<<endl;
+	cout<< c<<endl;
+	cout<< ++c<<endl;
+	cout<<c<<endl;
+
+    char d = 'a';
+	char e = 'c';
+	cout << (int) d<<endl;
+	cout << (int) e<<endl;
+	cout << (int) d-e<<endl;
+
+	int f;
+	double g;
+	char h;
+	cin>> f >>g >> h;
+	cout<< f <<" "<<g<<" "<<h<<endl;
+
+}
