@@ -1,0 +1,82 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+//conditions;
+  int a=3;
+  int b =4;
+  cout<<(a==b)<<endl;
+
+  int c=3;
+  int d =4;
+  cout<<(c!=d)<<endl;
+
+  //&& -----  ||
+  int e=3;
+  int f =4;
+  int g= 5;
+  cout<<((f>e) && (f>g))<<endl;
+
+  int h=3;
+  int i =4;
+  int j= 5;
+  cout<<((i>h) || (i>j))<<endl;
+
+  //conditions;
+  int k;
+  cin>>k;
+  if(k%2 ==0){
+    cout<<"The No Is Divisible By 2"<<endl;
+    int l =3; //scope declared inside is used in the given condition only;
+  }
+  else if(k%3 ==0){
+    cout<<"The No Is Divisible By 3"<<endl;
+  
+  }
+  else{
+    cout<<"NO"<<endl;
+  }
+
+
+  //LOOPS 
+  // 1. WHILE LOOP
+  int m=1;
+  while(m <= 10){
+    cout<< m <<endl;
+    m++;
+  }
+
+  // 2. FOR LOOP
+  for(int n=1;n<=10;n++){
+    cout<< n <<endl;
+  }
+
+  // PATTERN MAKING ;
+  int test_case;
+  cin>> test_case;
+  for(int test=1;test<=test_case;test++){
+      int q;
+      cin >> q;
+      for(int o=1;o<=q;o++){
+         for(int p=1;p<=o;p++){
+            cout << "@";
+          }
+          cout<<endl;
+      }
+    }
+
+    //JUMP STATEMENTS :
+    
+    while(true){
+      int x;
+      cin>>x;
+      if(x == 42){
+        break;
+      }
+      cout<< x <<endl;
+
+    }
+  
+
+}
