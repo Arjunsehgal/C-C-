@@ -1,0 +1,46 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+  cout<<5/7.0<<endl;
+  cout<<'c'+1<<endl;
+  double a = 3/2.0;
+  cout<<a<<endl;
+
+
+//PRESIDENCE :
+  cout <<7/2 *3<<endl;
+  cout<< 3* 7/ 2<< endl;
+
+//RANGES :
+  int p = 100000;
+  int q = 100000;
+  int r = p*q;      //doesnot gives 10 ki power;
+  cout<<p<<" "<<q<<" "<<r<<endl;
+  int mx = INT_MAX;
+  cout<<"mx :"<<mx<<endl;
+
+  int mx1 = INT_MAX +1;  //gives an overflow condition;
+  cout<<"mx1 :"<<mx1<<endl;
+
+  int mx2 = INT_MAX;
+  cout<<"mx2 :"<<mx2 +1<<endl;
+
+
+  long int x = 100000;
+  long int y = 100000;
+  long int z = x*y;      // gives 10 ki power;
+  cout<<x<<" "<<y<<" "<<z<<endl;
+
+  int e = 100000;
+  int f = 100000;
+  long int g = e * 1LL * f;      // gives 10 ki power;
+  cout<<e<<" "<<f<<" "<<g<<endl;
+
+
+  double k = 100000;//if we use double
+  double l = 100000;
+  double m = k*l;      // gives 10 ki power;
+  cout<<k<<" "<<l<<" "<< fixed << setprecision(0) << m << endl;
+
+}
