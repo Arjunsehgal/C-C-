@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    string s;
+    cin>> s;
+    cout <<s[s.size() - 1] <<endl;  //but it will diaplay as a character
+
+    int last_digit = s[s.size() - 1] - '0';//this will print as integer
+    cout<< last_digit <<endl;
+
+}
+ 
+
+
