@@ -1,0 +1,71 @@
+1.                                                      USE OF PUSH BACK FUNCTION IN REVERSING A NUMBER and  CHECKING NUMBER IS PALINDROME OR NOT :
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    string str;
+    cin>>str;
+    string str_rev;
+    for (int i =str.size()-1 ; i>=0; --i){
+        //str_rev = str_rev + str[i];
+        
+        //use of push_back()
+        
+        str_rev.push_back(str[i]);
+    }
+    cout<< str_rev<<endl;
+    
+    //checking for pallinDrome
+    
+    if(str == str_rev){
+        cout<< "YES";
+        
+    }
+    else{
+        cout<< "NO";
+    }
+    }
+    
+    
+    
+    
+    2.                                        CHECKING NUMBER IS PALLINDROME OR NOT CHARACTER BY CHARACTER :
+    
+    
+     #include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    string str;
+    cin>>str;
+    string str_rev;
+    int flag =0;
+    int n =str.size();
+    for (int i =str.size()-1 ; i>=0; --i){
+        //str_rev = str_rev + str[i];
+         
+        //use of push_back()
+        if(str[i] != str[n-1-i]){
+            flag = 1;
+            break;
+        }
+    }
+    //checking for pallinDrome
+    if(flag){
+        cout<< "NO";
+        
+    }
+    else{
+        cout<< "YES";
+    }
+}
+ 
+
+
+
+    
+    
+    
+    
+    
