@@ -42,7 +42,7 @@ int main(){
     string str_rev;
     int flag =0;
     int n =str.size();
-    for (int i =str.size()-1 ; i>=0; --i){
+    for (int i =n/2 ; i>=0; --i){
         //str_rev = str_rev + str[i];
          
         //use of push_back()
