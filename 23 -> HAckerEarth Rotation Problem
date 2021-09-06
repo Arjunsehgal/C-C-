@@ -1,0 +1,68 @@
+PROBLEM :::: 
+ 
+ 
+ You are given two strings  and  of the same length . Your task is to convert the string  into  by doing some operations. In an operation, you can delete the first character of the string  and append any character at the end of the string. You are required to determine the minimum number of operations to convert  into .
+
+Input format
+
+First line: Single integer  denoting the length of the strings
+Second line: String 
+Third line: String 
+Output format
+Print a single integer that represents the answer to the question.
+
+Constraints
+
+Both strings consist of only lowercase alphabets.
+
+Sample Input
+7
+aaxaabc
+aabcaax
+sample Output
+3
+
+
+
+:::::::::::::::::: CODE ::::::::::::
+
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+
+int n;
+
+cin>>n;
+
+string s,t;
+
+cin>>s;
+
+cin>>t;
+
+int count = 0;
+
+string tmp;
+
+for(int i=0;i<n;i++){
+
+tmp=s.substr(i);
+
+if(t.find(tmp)==0){
+
+cout<<count<<endl;
+
+return 0;
+
+}
+
+count++;
+cout<<tmp<<endl;
+
+}
+cout<<tmp<<endl;
+
+}
