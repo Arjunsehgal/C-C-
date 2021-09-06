@@ -1,0 +1,103 @@
+
+https://www.hackerearth.com/practice/algorithms/string-algorithm/basics-of-string-manipulation/practice-problems/algorithm/good-sequences-46c31a23/
+
+
+
+Problem
+You are given a string  consisting of lowercase alphabets. A good subsequence of this string is a subsequence which contains distinct characters only. 
+Determine the number of good subsequences of the maximum possible length modulo .
+
+In other words, determine the length  of the longest good subsequence and the number of good subsequences of length  modulo .
+
+Input format
+
+First line: An integer  denoting the number of test cases
+Each of the next  lines: String 
+Output format
+
+For each test case, print the number of good subsequences of the maximum length modulo .
+Answer for each test case should come in a new line.
+
+Input Constraints
+
+
+
+Sample Input
+3
+aaa
+abba
+abcd
+Sample Output
+3
+4
+1
+Time Limit: 2
+Memory Limit: 256
+Source Limit:
+Explanation
+In the first testcase, any one of the  can be chosen. Hence there are  good subsequences of maximum length.
+
+In the second testcase, the maximum length of a good subsequence is  . There are  such subsequences (listed by indices):
+
+(1, 2)
+(1, 3)
+(2, 4)
+(3, 4)
+In the third testcase, the maximum length of a good subsequence is  and there is only  such subsequence.
+
+
+
+
+::::::::::::::::::::::::::::::::::::::code::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+
+{
+
+    long long mod=1000000007;
+
+    int t;
+
+    cin>>t;
+
+    while(t--)
+
+    {
+
+        string s;
+
+        cin>>s;
+
+        map<char,long long int>m;
+
+        for(int i=0;i<s.size();i++)
+
+        {
+
+            m[s[i]]++;
+
+        }
+
+        long long ans=1;
+
+        for(auto & it:m)
+
+        {
+
+ans=((ans%mod)*(it.second%mod))%mod;
+
+        }
+
+        cout<<ans<<'\n';
+
+    }
+
+    return 0;
+
+}
