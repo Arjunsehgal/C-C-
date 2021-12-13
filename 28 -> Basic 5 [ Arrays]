@@ -1,0 +1,61 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+
+  //ARRAYS :
+  //1. 1-D ARRAY :
+
+  int n;
+  cin>>n;
+  int a[n];
+  for(int i=0;i<n;i++){
+    cin>>a[i];
+  }
+  int sum =0;
+  for (int i=0;i<n;i++){
+    sum = sum +a[i];
+  }
+  cout<< sum<<endl;
+
+
+//2-D ARRAYS :
+
+ int a1 ,a2;
+ cin>>a1>>a2;
+ int arr[a1][a2];
+ for(int i =0 ; i<a1 ; i++){
+   for(int j =0; j<a2;j++){
+     cin>>arr[i][j];
+   }
+ }
+
+ for(int i=0;i<a1;i++){
+   for(int j=0;j<a2;j++){
+     cout<<arr[i][j] <<" ";
+   }
+   cout<< endl;
+ }
+
+
+ //size : 1. LOCAL ARRAY SIZE 2. GLOBAL AARAY SIZE :
+
+//  int b =1e7;        //:::local array size much not exceed 10^5:::
+//  int array[b];
+//  array[n-1] = 7;
+//  cout<<a[n-1];
+
+
+}
+
+
+//GLOBAL SIZE 
+
+// #include <bits/stdc++.h>   //it will run as 10^7
+// using namespace std;
+// const int n = 1e7;
+// int array[n];
+// int main(){
+//   array[n-1] = 7;
+//   cout<<a[n-1];
+
+// }
