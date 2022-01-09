@@ -1,0 +1,78 @@
+#include <iostream>
+using namespace std;
+
+int increment (int n){
+  n++;
+  return n;
+}
+
+void increment1 (int n){
+  n++;
+}
+
+void increment2 (int &n){
+  n++;
+}
+
+void increment3 (int &n, int n1){
+  n++;
+  n1++;
+}
+
+void Swap (int &a, int &b){
+  int temp =a;
+      a =b;
+      b= temp;
+}
+
+void func( string &S){
+   S = "";
+}
+
+void func1( int a[] ){
+   a[0] = 5;
+}
+
+void func2( int a[][20] ){
+   a[0][0] = 5;
+}
+
+int main() {
+  cout << "Hello World!\n";
+  int a =3;
+  int b = 5;
+  cout<< a << " " << b <<endl;
+  // a = increment(a);       1st function
+  // cout<< a<<endl;
+
+  // increment1(a);               // 2nd function
+  // cout<< a <<endl;
+  
+  // increment2 (a);                // 3rd function 
+  // cout<< a <<endl; 
+
+  // increment3( a, b);                //4th function
+  // cout<< a << " " << b <<endl;
+
+  // swap ( a,b);                       // Swaping of Two Numbers
+  // cout<< a << " " << b <<endl;
+
+  // string s = "afsda";             //  refrences in string
+  // cout << s << endl;
+  // func(s);
+  // cout<< s << endl;
+
+  // int c[10];
+  // c[0] = 7;
+  // cout<< c[0] << endl;
+  // func1(c);
+  // cout<< c[0] << endl;
+
+  int d[10][20];
+  d[0][0] = 7;
+  cout<< d[0][0] << endl;
+  func2(d);
+  cout<< d[0][0] << endl;
+
+
+} 
