@@ -1,0 +1,57 @@
+## Problem
+Cheems doesn't like extra content so coming straight to the point. Given the input of one line, having words separated by a single space, print each word of the input, each in a new line.
+Also, change all the alphabets to uppercase along with doing this.
+
+Input:-
+Given in one line, all letters are lowercase only, separated by a single space.
+
+Characters used in input are from 'a' to 'z' only ( 26 in total ) , both included.
+
+Length of input   
+
+Output:-
+Output each word with characters in uppercase.
+
+Note:- A testcase contains only one word as the input to get partial marks. Also, the ideal solution has been provided, you can test any of your legal input to get its answer.
+
+Sample Input
+subscribe to the luv channel
+Sample Output
+SUBSCRIBE
+TO
+THE
+LUV
+CHANNEL
+Time Limit: 1
+Memory Limit: 256
+Source Limit:
+Explanation
+Every word of the input has been placed in the new line with characters in uppercase as well..
+
+
+
+## code
+
+
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+char upper(char c){
+    return 'A' + ( c - 'a');
+}
+
+int main(){
+    while(true){
+        string s;
+        cin>> s;
+        if(s.size() == 0){
+            break;
+
+        }
+        for (int i=0;i<s.size();i++){
+            s[i] = upper(s[i]);
+        }
+        cout<< s << endl;
+    }
+}
