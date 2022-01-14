@@ -1,0 +1,15 @@
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+  cout << "Hello World!\n";
+  int n;
+  cin>>n;
+  int m =47;
+  long long fact;
+  for(int i =2;i<=n;++i){
+    fact = (fact *i) % m;
+  }
+  cout<< fact<<endl;
+} 
