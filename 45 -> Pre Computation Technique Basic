@@ -1,0 +1,40 @@
+/*
+
+Problem :
+given T Test Cases and in t test cases 
+theres a number n . compute the factorial of n for each
+test case % m
+
+m = 10^9 + 7;
+
+constraints :
+1<=T <=10^5
+1<= N <= 10^5
+
+*/
+
+
+#include<bits/stdc++.h>
+using namespace std;
+const int M = 1e9+7;
+const int N = 1e5+10;
+long long fact[N];
+
+int main() {
+  fact[0] = fact[1] =1;
+  for(int i=0;i<N;i++){
+    fact[i]= fact [i-1]*i;
+  }
+  int t;
+  cin>>t;
+  while(t--){
+    int n;
+    cin>>n;
+  cout<< fact[n]<<endl;
+  }   
+ }
+  
+  // O(T*N) = O(N^2) = 10^5 * 10^5 = 10^10     // old one
+  // So Code doesnot run in 1 second 
+
+  // O(N) + O(T) = O(N) = 10^5   // new one
