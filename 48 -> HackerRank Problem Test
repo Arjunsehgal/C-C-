@@ -1,0 +1,76 @@
+// #include <bits/stdc++.h>
+// using namespace std;
+// # define my_sizeof(type) ((char *)(&type+1)-(char*)(&type))
+
+// int books (int input1,int input2,int input3[],int input4[]){
+//   int max1,max2,max3,max4;
+  
+//    max3 = input3[0];
+//    max4 = input4[0];
+//   int size = my_sizeof(input3)/my_sizeof(input3[0]);
+//   int size1 = my_sizeof(input3)/my_sizeof(input3[0]);
+//   for(int i=0;i<size;i++){
+//     if(input3[i]>max3){
+//       max3 = input3[i];
+//     }
+//   }
+//   for(int i=0;i<size1;i++){
+//     if(input4[i]>max4){
+//       max4 = input4[i];
+//     }
+//   }
+//   if(input1>input2 && input1>max3 && input1>max4){
+//     max1 = input1;
+//     return max1;
+//   }else if(input2>input1 && input2>max3 && input2>max4){
+//     max2 = input2;
+//     return max2;
+//   }else if(max3>input1 && max3>input2 && max3>max4){
+//     return max3;
+//   }else{
+//     return max4;
+//   }
+// }
+// int main (){
+//   int a =2;
+//   int b=3;
+//   int c[]={1,2};
+//   int d[]= {5,6};
+//   int max = books (a,b,c,d);
+//   cout<< max;
+// }
+
+
+#include <bits/stdc++.h>
+#include <iostream>
+using namespace std;
+
+int calculateJumps(int X, int Y, int n, int walls[])
+{
+    int jumps = 0;
+    for(int i=0;i<n;i++) {
+        int reach = X;
+        int jump = 1;
+        while(reach < walls[i]) {
+            reach += (X-Y);
+            jump += 1;
+        }
+        jumps += jump;
+    }
+    return jumps;
+}
+
+int main()
+{
+    int X;
+    cin >> X;
+    int Y;
+    cin >> Y;
+    int n;
+    cin >> n;
+    int walls[n];
+    for(int i=0;i<n;i++)
+        cin >> walls[i];
+    cout << calculateJumps(X, Y, n, walls);
+    return 0;
+}
